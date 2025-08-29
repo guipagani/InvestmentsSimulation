@@ -18,7 +18,9 @@ public class Investment {
     private Long id;
 
     private String acao;
-    private String tipo;
     private BigDecimal valor;
-    private BigDecimal dividendos;
+
+    @ManyToOne
+    @JoinColumn(name = "usuario_id")
+    private User usuario;
 }
