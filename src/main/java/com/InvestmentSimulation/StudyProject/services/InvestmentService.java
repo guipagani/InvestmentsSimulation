@@ -37,11 +37,9 @@ public class InvestmentService {
     public Map<String, Object> calcularRetorno(Investment investment) {
         Map<String, Object> resultado = new HashMap<>();
 
-        // Dividendos fixos por ação
         BigDecimal dividendosPorAcao = new BigDecimal("0.10");
         resultado.put("dividendos", dividendosPorAcao);
 
-        // Retorno fictício 8% do valor do investimento
         BigDecimal retornoProjetado = investment.getValor().multiply(new BigDecimal("0.08"));
         resultado.put("retornoProjetado", retornoProjetado);
 
